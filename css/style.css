@@ -155,7 +155,7 @@ body {
 
 #hero {
   background: url(../assets/plant.png);
-  height: 90vh;
+  height: 90vh; /* desktop height */
   width: 100%;
   background-size: cover;
   background-position: top 25% right 0;
@@ -164,7 +164,41 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  color: #fff; /* optional: ensures text is readable */
 }
+
+@media (max-width: 1024px) {
+  #hero {
+    padding: 0 50px; /* slightly smaller padding for tablets */
+    background-position: top center;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    height: 80vh; /* reduce hero height on smaller screens */
+    padding: 0 30px;
+    align-items: center;
+    text-align: center;
+    background-position: top center;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero {
+    height: 70vh; /* further reduce height for small phones */
+    padding: 0 15px;
+  }
+
+  #hero h1 {
+    font-size: 1.8rem; /* adjust hero heading */
+  }
+
+  #hero p {
+    font-size: 1rem; /* adjust paragraph */
+  }
+}
+
 
 #hero h4 {
   padding-bottom: 15px;
