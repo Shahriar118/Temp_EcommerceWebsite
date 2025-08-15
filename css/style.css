@@ -95,7 +95,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 20px 80px;
-  background-color: #E3E6F3;
+  background-color: #ffffff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
   position: sticky;
@@ -154,7 +154,7 @@ body {
 }
 
 #hero {
-  background: url(../assets/hero4.png);
+  background: url(../assets/plant.png);
   height: 90vh;
   width: 100%;
   background-size: cover;
@@ -558,4 +558,43 @@ footer a:hover {
 footer .copyright {
   width: 100%;
   text-align: center;
+}
+
+
+/* ===== Header Logo ===== */
+#header .logo {
+    display: block;
+    height: 80px; /* let it adjust to image */
+}
+
+#header .logo img {
+    height: 80px;       /* bigger logo */
+    max-height: 100%;   /* doesn't exceed header height */
+    width: auto;        /* maintain aspect ratio */
+}
+
+footer .logoS {
+    width: 100px;  /* adjust as needed */
+    height: auto;  /* maintains aspect ratio */
+}
+
+
+
+/* ===== Responsive Logos ===== */
+@media (max-width: 1024px) {
+    #header .logo {
+        width: 150px;   /* smaller on tablets */
+    }
+    footer .logo {
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    #header .logo {
+        width: 120px;   /* smaller on mobile */
+    }
+    footer .logo {
+        width: 80px;
+    }
 }
